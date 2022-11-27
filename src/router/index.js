@@ -37,11 +37,29 @@ const routes = [
 		component: () =>
 				import ('../views/Registration.vue')
 	},
+	{
+		path: '/registrationRukovoditel',
+		name: 'registrationRukovoditel',
+		component: () =>
+		import ('../views/RegistrationRukovoditel.vue')
+	},
+	{
+		path: '/registrationRazrabotchik',
+		name: 'registrationRazrabotchik',
+		component: () =>
+				import ('../views/RegistrationRazrabotchik.vue')
+	},
   {
-    path: '/IPR',
-    name: 'IPR',
+    path: '/ipr',
+    name: 'ipr',
     component: () =>
-      import('../views/IPR.vue')
+      import('../views/ipr.vue')
+  },
+  {
+    path: '/curs-py-1',
+    name: 'curs-py-1',
+    component: () =>
+      import('../views/Curse/Curse-Py-1.vue')
   }
 ]
 

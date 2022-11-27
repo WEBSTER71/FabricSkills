@@ -8,7 +8,18 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 10px;
-		padding: 234px 0px;
+		@include adaptiv-value("max-width", 580, 320, 1);
+		@include adaptiv-value("padding-top", 200, 50, 1);
+		@include adaptiv-value("padding-bottom", 200, 50, 1);
+		@media (max-width:$md1) {
+			@include adaptiv-value("max-width", 400, 320, 1);
+		}
+		@media (max-width:$md3) {
+			max-width: 100%;
+			flex-wrap: wrap;
+			@include adaptiv-value("padding-bottom", 400, 200, 1);
+			padding-bottom: 350px;
+		}
 	}
 	&__title {
 		font-weight: 900;
@@ -19,18 +30,26 @@
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 30px;
-        max-width: 609px;
+		max-width: 610px;
 	}
 	&__bg {
 		& img {
 			position: absolute;
-			top: 0;
+			bottom: 0;
 			right: 0;
+			@include adaptiv-value("width", 745, 300, 1);
+			@include adaptiv-value("height", 555, 230, 1);
+			@media (max-width:$md2) {
+				right: -108px;
+			}
+			@media (max-width:$md4) {
+				right: 0;
+			}
 		}
 	}
 }
 .advantages {
-    margin-top: 50px;
+	margin-top: 50px;
 	&__title {
 		font-weight: 900;
 		font-size: 30px;
@@ -42,6 +61,8 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 20px;
 	}
 	&__items {
 		display: flex;
@@ -72,12 +93,20 @@
 	}
 	&__wrapper {
 		display: flex;
+		flex-wrap: wrap;
 	}
 	&__subtitle-box {
 		display: flex;
 		flex-direction: column;
-		flex: 1 1 25%;
+		flex: 1 1 20%;
 		
+	}
+	&__content-box {
+		display: flex;
+		flex-direction: column;
+		padding: 18px 0px;
+		gap: 25px;
+		flex: 1 1 20%;
 	}
 	&__subtitle {
 		display: flex;
@@ -87,13 +116,6 @@
 		padding-right: 30px;
 		padding-bottom: 18px;
 	}
-	&__content-box {
-		display: flex;
-		flex-direction: column;
-		padding: 18px 0px;
-		gap: 25px;
-		flex: 1 1 25%;
-	}
 	&__text {
 		font-weight: 400;
 		font-size: 14px;
@@ -102,41 +124,44 @@
 }
 .blog{
     margin-top: 150px;
-    height: 550px;
+		margin-bottom: 100px;
     &__title{
         text-align: center;
-        font-weight: 800;
+        font-weight: 900;
         font-size: 30px;
         line-height: 39px;
         color: #2B2B2B;
+				margin-bottom: 50px;
     }
     &__wrapper{
-
-        max-width: 380px;
-
-        max-height: 250px;
-
-    }
-    &__items{
-        display: flex;
-        flex-direction: row;
-        column-gap: 50px;
-        & img{
-            max-width: 380px;
-        }
-
-    }
-    &__box{
-        margin-top: 50px;
-        border: 1px solid #F0F0F0;
-        box-shadow: 0px 4px 26px rgba(203, 203, 203, 0.25);
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 30px;
+			@media (max-width:$md3) {
+				column-gap: 50px;
+				justify-content: center;
+			}
+		}
+			&__items{
         display: flex;
         flex-direction: column;
+				max-width: 380px;
+        border: 1px solid #F0F0F0;
+				border-radius: 10px;
+        box-shadow: 0px 4px 26px rgba(203, 203, 203, 0.25);
         transition: 0.3s;
         row-gap: 28px;
+				@media (max-width:$md2) {
+					max-width: 350px;
+				}
+				& img{
+						max-width: 100%;
+						border-radius: 10px 10px 0px 0px;
+				}
         &__tx{
-            text-align: left;
-            margin-left: 28px;
+            margin: 0px 28px;
             font-weight: 700;
             font-size: 16px;
             line-height: 22px;
@@ -158,16 +183,31 @@
 }
 .profile{
     &__wrapper{
+			position: relative;
         display: flex;
+				flex-wrap: wrap;
         justify-content: space-between;
+				margin-bottom: 30px;
+				margin-top: 100px;
+				gap: 20px;
+				@media (max-width:$md3) {
+					justify-content: center;
+				}
     }
     &__items{
-        display: flex;
-        flex-direction: column;
-        row-gap: 15px;
+			display: flex;
+			flex-direction: column;
+			row-gap: 15px;
+			@media (max-width:$md4) {
+				&:first-child {
+					order: 2;
+				}
+				&:last-child {
+					order: 1;
+				}
+			}
     }
     &__surname{
-        margin-top: 100px;
         font-weight: 900;
         font-size: 36px;
         line-height: 47px;
@@ -179,7 +219,13 @@
         color: #2B2B2B;
     }
     &__photo{
-        margin-top: 105px;
+			position: absolute;
+			right: 0;
+				& img {
+					width: 350px;
+					height: 350px;
+					border-radius: 20%;
+				}
     }
 }
 .description{
@@ -296,6 +342,9 @@
 		padding: 30px;
 		border: 1px solid #F0F0F0;
 		border-radius: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 30px;
 	}
 	&__content-box {
 		display: flex;
@@ -328,6 +377,7 @@
 	&__skills {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 		gap: 10px;
 		font-weight: 700;
 		font-size: 14px;
@@ -363,6 +413,14 @@
 		background: #F2F2F2;
 		border: 1px solid #EDEDED;
 		border-radius: 25px;
+		@media (max-width:$md3) {
+			margin: 100px auto;
+			padding: 50px 50px;
+		}
+		@media (max-width:$md4) {
+			margin: 50px auto;
+			padding: 30px 10px;
+		}
 	}
 	&__title {
 		font-weight: 700;
@@ -452,11 +510,19 @@
 		justify-content: center;
 		flex-direction: column;
 		max-width: 384px + 200px;
-		margin: 100px auto;
+		margin: 75px auto;
 		padding: 50px 100px;
 		background: #F2F2F2;
 		border: 1px solid #EDEDED;
 		border-radius: 25px;
+		@media (max-width:$md3) {
+			margin: 100px auto;
+			padding: 50px 50px;
+		}
+		@media (max-width:$md4) {
+			margin: 50px auto;
+			padding: 30px 10px;
+		}
 	}
 	&__title {
 		font-weight: 700;
@@ -494,6 +560,22 @@
 			min-width: auto;
 		}
 	}
+	&__textarea {
+		min-width: 384px;
+		padding: 15px 20px 75px;
+		background: #fff;
+		border: 1px solid #EDEDED;
+		border-radius: 5px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		color: #000;
+		resize: none;
+		@media (max-width:$md4) {
+			width: 100%;
+			min-width: auto;
+		}
+	}
 	&__password {
 		position: absolute;
 		top: 16px;
@@ -512,6 +594,20 @@
 			width: 20px;
 			height: 20px;
 		}
+	}
+	&__select {
+		display: flex;
+		column-gap: 20px;
+	}
+	&__checkbox {
+		display: flex;
+		flex-wrap: wrap;
+		align-self: start;
+		gap: 15px;
+	}
+	&__button-box {
+		display: flex;
+		column-gap: 20px;
 	}
 	&__text {
 		font-weight: 500;
@@ -541,5 +637,114 @@
 		&:hover {
 			color: #337AE7;
 		}
+	}
+}
+.ipr {
+	min-height: 1080px;
+	&__items {
+		display: flex;
+		column-gap: 50px;
+	}
+	&__content-left {
+		flex: 1 1 20%;
+		min-height: 1080px;
+		padding: 10px;
+		color: #fff;
+		background: #28282B;
+	}
+	&__block {
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+		border-radius: 10px;
+		background: #01E45C;
+		&-arrow {
+			display: inline-block;
+		}
+		&-title {
+			font-weight: 700;
+			font-size: 22px;
+			line-height: 28px;
+			margin-top: 30px;
+			margin-bottom: 10px;
+		}
+		&-btn__box {
+			display: flex;
+			column-gap: 20px;
+		}
+		&-button {
+
+		}
+	}
+	&__content-right {
+		position: relative;
+		flex: 1 1 80%;
+	}
+	&__content-point {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 5px;
+		&-1{top: 375px - 50px; right: 425px + 150px;}
+		&-2{top: 590px - 50px; right: 500px + 150px;}
+		&-3{top: 675px - 50px; right: 750px + 150px;}
+		&-4{top: 725px - 50px; right: 275px + 150px;}
+		&-5{top: 550px - 50px; right: 150px + 150px;}
+		&-6{top: 350px - 50px; right: 200px + 150px;}
+		&-7{top: 175px - 50px; right: 200px + 150px;}
+		&-8{top: 150px - 50px; right: 375px + 150px;}
+		&-9{top: 225px - 50px; right: 575px + 150px;}
+		&-10{top: 375px - 50px; right: 775px + 150px;}
+	}
+	&__icon {
+		
+	}
+	&__name {
+		max-width: 130px;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+	}
+	&__content-arrow {
+		position: absolute;
+		&-1{top: 425px - 50px; right: 500px + 150px; transform: rotate(300deg);}
+		&-2{top: 650px - 50px; right: 575px + 150px; transform: rotate(150deg) scaleX(-1);}
+		&-3{top: 650px - 50px; right: 375px + 150px; transform: rotate(220deg);}
+		&-4{top: 615px - 50px; right: 150px + 150px; transform: rotate(145deg);}
+		&-5{top: 425px - 50px; right: 160px + 150px; transform: rotate(250deg) scaleX(-1);}
+		&-6{top: 200px - 50px; right: 100px + 150px; transform: rotate(90deg);}
+		&-7{top: 200px - 50px; right: 275px + 150px; transform: rotate(180deg) scaleX(-1);}
+		&-8{top: 75px - 50px; right: 450px + 150px; transform: rotate(345deg);}
+		&-9{top: 300px - 50px; right: 600px + 150px; transform: rotate(135deg) scaleX(-1);}
+	}
+}
+// //Курсы
+.curs_py_1{
+	&__wrapper{
+			display: flex;
+			flex-direction: row;
+	}
+	&__headBlock{
+			background-color: #000000;
+			display: flex;
+			flex-direction: row;
+	}
+	&__items{
+		padding: 0px;
+	}
+	&__block{
+			max-width: 32px;
+			max-height: 32px;
+			background-color: #F0F0F0;
+	}
+	&__title {
+	}
+
+	&__video {
+	}
+
+	&__button {
 	}
 }
