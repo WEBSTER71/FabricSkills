@@ -6,8 +6,8 @@
                 <div class="profile__container _container">
                     <div class="profile__wrapper">
                         <div class="profile__items">
-                            <div class="profile__surname">Roman Zhuludkov</div>
-                            <div class="main-blcok__profession">Front-end разработчкик</div>
+                            <div class="profile__surname">Роман Жулудков</div>
+                            <div class="main-blcok__profession">Программист</div>
                         </div>
                         <div class="profile__items">
                             <div class="profile__photo"><img src="../assets/img/profile/Roman.jpg"></div>
@@ -26,40 +26,10 @@
                             <div class="description__title-skill">Мои скиллы:</div>
                             <div class="description__button-box">
                                 <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Python-разработка</div>
+                                    <div class="btn-color__txt">Python</div>
                                 </div>
                                 <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Web-разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Мобильная разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">PHP-разработка</div>
-                                </div>
-                                 <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Python-разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Web-разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Мобильная разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">PHP-разработка</div>
-                                </div>
-                                 <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Python-разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Web-разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">Мобильная разработка</div>
-                                </div>
-                                <div class="description__button btn-color">
-                                    <div class="btn-color__txt">PHP-разработка</div>
+                                    <div class="btn-color__txt">C++</div>
                                 </div>
                             </div>
                         </div>

@@ -15,7 +15,7 @@
 									<span class="options__title">Выберите должность:</span>
 									<label class="options__item">
 										<input class="options__input _male" checked type="radio" value="man" name="form[option]">
-										<span class="options__text"><span>Программирование</span></span>
+										<span class="options__text"><span>Программист</span></span>
 									</label>
 									<label class="options__item">
 										<input class="options__input" type="radio" value="female" name="form[option]">
@@ -32,6 +32,21 @@
 								</div>
 							</div>
 							<div class="registration__checkbox">
+								<div class="checkbox__title">Выберите скиллы:</div>
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input">
+									<div class="checkbox__text">python</div>
+								</label>
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input">
+									<div class="checkbox__text">C#</div>
+								</label>
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__input">
+									<div class="checkbox__text">C++</div>
+								</label>
+							</div>
+							<!--<div class="registration__checkbox">
 								<div class="checkbox__title">Выберите скиллы:</div>
 								<label class="checkbox">
 									<input type="checkbox" class="checkbox__input">
@@ -65,7 +80,7 @@
 									<input type="checkbox" class="checkbox__input">
 									<div class="checkbox__text">figma</div>
 								</label>
-							</div>
+							</div>-->
 						</div>
 						<button type="submit" class="registration__button btn" @click="sendButtonReg">
 							<div class="btn-txt">Регистрация</div>
@@ -100,20 +115,7 @@ export default {
 	},
 	methods: {
 		async sendButtonReg() {
-			if (this.showPass == true) {
-				this.firstPass = document.querySelector("._first-password-text").value
-			}
-			else {
-				this.firstPass = document.querySelector("._first-password-pass").value
-			}
-
-			if (this.showPassTwo == true) {
-				this.secondPass = document.querySelector("._second-password-text").value
-			}
-			else {
-				this.secondPass = document.querySelector("._second-password-pass").value
-			}
-			window.location.href = '/catalog';
+			window.location.href = '/profile';
 		}
 	}
 }

@@ -7,7 +7,7 @@
 							<div class="login__items">
 								<div class="login__title">Вход</div>
 								<div class="login__wrapper-input">
-									<input type="email" placeholder="Телеграмм" title="Введите в это поле ввода свой электронный адрес."
+									<input type="email" placeholder="Номер телефона" title="Введите в это поле ввода свой электронный адрес."
 										class="login__input _email-auth">
 								</div>
 								<div class="login__wrapper-input login__wrapper-input_password">

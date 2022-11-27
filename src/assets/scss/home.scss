@@ -533,6 +533,7 @@
 	&__wrapper-input {
 		position: relative;
 		&_options {
+			flex: 1 1 100%;
 			align-self: start;
 			margin-bottom: 20px;
 		}
@@ -597,13 +598,16 @@
 	}
 	&__select {
 		display: flex;
-		column-gap: 20px;
+		flex-wrap: wrap;
+		row-gap: 20px;
 	}
 	&__checkbox {
 		display: flex;
 		flex-wrap: wrap;
 		align-self: start;
+		justify-content: space-between;
 		gap: 15px;
+		flex: 1 1 100%;
 	}
 	&__button-box {
 		display: flex;

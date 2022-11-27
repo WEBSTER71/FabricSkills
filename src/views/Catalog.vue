@@ -11,13 +11,13 @@
 							<div class="catalog__filter-box">
 								<div class="catalog__point">
 									<label class="checkbox">
-										<input type="checkbox" class="checkbox__input">
+										<input checked type="checkbox" class="checkbox__input">
 										<div class="checkbox__text">Программирование</div>
 									</label>
 								</div>
 								<div class="catalog__point">
 									<label class="checkbox">
-										<input type="checkbox" class="checkbox__input">
+										<input checked type="checkbox" class="checkbox__input">
 										<div class="checkbox__text">Дизайн</div>
 									</label>
 								</div>
@@ -29,7 +29,7 @@
 								</div>
 								<div class="catalog__point">
 									<label class="checkbox">
-										<input type="checkbox" class="checkbox__input">
+										<input checked type="checkbox" class="checkbox__input">
 										<div class="checkbox__text">Менеджемент</div>
 									</label>
 								</div>
@@ -46,8 +46,8 @@
 								<div class="catalog__info">
 									<div class="catalog__profile-ico"><img src="../assets/img/profile/Dmitry.jpg" alt=""></div>
 									<div class="catalog__name-box">
-										<div class="catalog__name">Dmitry</div>
-										<div class="catalog__surname">Tihonov</div>
+										<div class="catalog__name">Дмитрий</div>
+										<div class="catalog__surname">Тихонов</div>
 									</div>
 								</div>
 								<div class="catalog__profession">Программирование</div>
@@ -69,8 +69,8 @@
 								<div class="catalog__info">
 									<div class="catalog__profile-ico"><img src="../assets/img/profile/Roman.jpg" alt=""></div>
 									<div class="catalog__name-box">
-										<div class="catalog__name">Roman</div>
-										<div class="catalog__surname">Zhuludkov</div>
+										<div class="catalog__name">Роман</div>
+										<div class="catalog__surname">Жулудков</div>
 									</div>
 								</div>
 								<div class="catalog__profession">Дизайн</div>
@@ -97,8 +97,8 @@
 								<div class="catalog__info">
 									<div class="catalog__profile-ico"><img src="../assets/img/profile/Vlados.png" alt=""></div>
 									<div class="catalog__name-box">
-										<div class="catalog__name">Vladislav</div>
-										<div class="catalog__surname">Akosta</div>
+										<div class="catalog__name">Владислав</div>
+										<div class="catalog__surname">Акоста</div>
 									</div>
 								</div>
 								<div class="catalog__profession">Менеджемент</div>

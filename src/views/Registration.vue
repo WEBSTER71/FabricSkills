@@ -7,7 +7,7 @@
 					<div class="registration__items">
 						<div class="registration__title">Регистрация</div>
 						<div class="registration__wrapper-input">
-							<input type="text" pattern="\d [0-9]" placeholder="Телеграмм" title="Введите в это поле ввода свой электронный адрес." class="registration__input">
+							<input type="text" pattern="\d [0-9]" placeholder="Номер телефона" title="Введите в это поле ввода свой электронный адрес." class="registration__input">
 						</div>
 						<div class="registration__wrapper-input">
 							<input type="text" placeholder="Имя" class="registration__input _name">
@@ -36,7 +36,7 @@
 								<div class="btn-txt">Руководитель</div>
 							</button>
 							<button type="submit" class="registration__button btn" @click="sendButtonRegRaz">
-								<div class="btn-txt">Руководитель</div>
+								<div class="btn-txt">Разработчик</div>
 							</button>
 						</div>
 						<div class="registration__text">У вас есть аккаунт?<router-link to="/login" class="registration__green-txt">Войти</router-link></div>

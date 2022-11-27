@@ -194,7 +194,12 @@ textarea.input {
 //<CHECK (chk+tab)>====================================================================================================
 .checkbox {
 	position: relative;
-	flex: 1 1 100%;
+	&__title {
+		min-width: 100%;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 21px;
+	}
 	// .checkbox__input
 	&__input {
 		position: absolute;
@@ -211,8 +216,9 @@ textarea.input {
 		display: inline-flex;
 		align-items: center;
 		position: relative;
+		font-weight: 500;
 		font-size: 16px;
-		color: #2B2B2B;
+		line-height: 21px;
 		letter-spacing: -0.3px;
 		line-height: calc(20 / 16);
 		cursor: pointer;
@@ -290,7 +296,7 @@ textarea.input {
 		align-items: center;
 		position: relative;
 		font-weight: 500;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 21px;
 		&:before {
 			content: "";
